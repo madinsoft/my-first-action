@@ -19,11 +19,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: |
+      - name: First step
+        run: |
           echo "${{github.ref}}"
 
-      - uses: actions/checkout@v3.3.0
+      - name: Checkout
+        uses: actions/checkout@v3.3.0
 
-      - run: tree
+      - name: list the content 
+        run: tree
 
-      - run: echo "${{ toJSON(github) }}"
+      - name: Dump the content of github
+        run: echo "${{ toJSON(github) }}"
