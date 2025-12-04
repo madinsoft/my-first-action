@@ -10,6 +10,6 @@ outputs:
     description: 'Return the time hello'
 runs:
   using: 'docker'
-  image: 'Dokcerfile'
+  image: 'Dockerfile'
   args:
     - ${{ inputs.who-to-greet }}
