@@ -8,3 +8,8 @@ jobs:
           echo 'test'
           echo 'autre ligne'
       - uses: actions/checkout@v3.3.0
+      - name: Use action
+        id: hello-action
+        uses: ./hello-world-docker-action
+        with:
+          who-to-greet: 'madinsoft'
