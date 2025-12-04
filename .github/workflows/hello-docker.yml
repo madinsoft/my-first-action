@@ -1,0 +1,24 @@
+name: Hello with docker
+on: 
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  hello-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.3.0
+
+      - name: Use action
+        id: hello-action
+        uses: ./hello-world-docker-action
+        with:
+          who-to-greet: 'madinsoft'
+
+      - nmae: Show output
+        run: echo "the time ${{ steps.hello-action.outputs.time }}
+    
+  
+    
