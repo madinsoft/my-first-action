@@ -7,3 +7,4 @@ jobs:
       - run: |
           echo 'test'
           echo 'autre ligne'
+      - uses: actions/checkout@v3.3.0
