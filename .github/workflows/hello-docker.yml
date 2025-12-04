@@ -17,7 +17,7 @@ jobs:
         with:
           who-to-greet: 'madinsoft'
 
-      - nmae: Show output
+      - name: Show output
         run: echo "the time ${{ steps.hello-action.outputs.time }}
     
   
