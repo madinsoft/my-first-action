@@ -59,6 +59,7 @@ jobs:
     environment: 
       name: Production
       url: https://writeabout.net
+    if: github.event.inputs.environment == 'Production'
     steps:
       - name: Launch tests
         run: |
